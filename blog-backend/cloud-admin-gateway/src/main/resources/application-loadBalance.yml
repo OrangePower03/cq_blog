@@ -1,0 +1,75 @@
+service:
+  article: lb://admin-article
+  user: lb://admin-user
+  link: lb://admin-link
+
+server:
+  port: 8989
+
+spring:
+  application:
+    name: admin-gateway
+
+  cloud:
+    nacos:
+      server-addr: 192.168.10.10:8848
+      discovery:
+        username: nacos
+        password: nacos
+        group: SEATA_GROUP
+
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      globalcors:
+        cors-configurations:
+          '[/**]': # 表示对所有的请求
+            allowedOriginPatterns: '*'
+            allowedMethods: ['GET', 'POST', 'PUT', 'DELETE']
+            allowedHeaders: '*'
+            allowCredentials: true
+            maxAge: 3600
+      routes:
+        - id: article_route
+          uri: ${service.article}
+          predicates:
+            - Path=/content/article/**
+        - id: category_route
+          uri: ${service.article}
+          predicates:
+            - Path=/content/category/**
+        - id: tag_route
+          uri: ${service.article}
+          predicates:
+            - Path=/content/tag/**
+
+        - id: user_route
+          uri: ${service.user}
+          predicates:
+            - Path=/user/**
+        - id: system_route
+          uri: ${service.user}
+          predicates:
+            - Path=/system/**
+        - id: routers_route
+          uri: ${service.user}
+          predicates:
+            - Path=/getRouters
+        - id: info_route
+          uri: ${service.user}
+          predicates:
+            - Path=/getInfo
+        - id: upload_route
+          uri: ${service.user}
+          predicates:
+            - Path=/upload
+
+        - id: link_route
+          uri: ${service.link}
+          predicates:
+            - Path=/content/link/**
+
+      # 将重复的请求头删除，网关和后端的跨域导致两个了，删掉一个
+      default-filters:
+          - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin

@@ -1,0 +1,62 @@
+host: http://127.0.0.1
+
+server:
+  port: 7777
+
+spring:
+  application:
+    name: blog-gateway
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      globalcors:
+        cors-configurations:
+          '[/**]': # 表示对所有的请求
+            allowedOriginPatterns: '*'
+            allowedMethods: ['GET', 'POST', 'PUT', 'DELETE']
+            allowedHeaders: '*'
+            allowCredentials: true
+            maxAge: 3600
+      routes:
+        - id: article_route
+          uri: ${host}:6666
+          predicates:
+            - Path=/article/**
+        - id: category_route
+          uri: ${host}:6666
+          predicates:
+            - Path=/category/**
+
+        - id: user_route
+          uri: ${host}:6667
+          predicates:
+            - Path=/user/**
+        - id: login_route
+          uri: ${host}:6667
+          predicates:
+            - Path=/login
+        - id: logout_route
+          uri: ${host}:6667
+          predicates:
+            - Path=/logout
+        - id: upload_route
+          uri: ${host}:6667
+          predicates:
+            - Path=/upload
+
+        - id: comment_route
+          uri: ${host}:6668
+          predicates:
+            - Path=/comment/**
+
+        - id: link_route
+          uri: ${host}:6669
+          predicates:
+            - Path=/link/**
+
+      # 将重复的请求头删除，网关和后端的跨域导致两个了，删掉一个
+      default-filters:
+          - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin

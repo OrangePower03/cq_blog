@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.cloudblogarticle.mapper.TagMapper">
+
+    <select id="getTagsByArticleId" resultType="java.lang.Long">
+        select tag_id from sg_article_tag where article_id=#{id}
+    </select>
+
+    <insert id="addArticleWithTags">
+        insert into sg_article_tag(article_id, tag_id) values
+        <foreach item="tagId" collection="tagIds" separator=",">
+            (#{articleId},#{tagId})
+        </foreach>
+    </insert>
+    <insert id="insertByATid">
+        insert into sg_article_tag(article_id, tag_id) values(#{articleId},#{tagId})
+    </insert>
+
+    <delete id="deleteByATid">
+        delete from sg_article_tag where article_id=#{articleId}
+        <if test="tagId != null">
+            and tag_id=#{tagId}
+        </if>
+    </delete>
+
+    <delete id="deleteByAId">
+        update sg_article_tag set del_flag=1 where article_id in
+        <foreach collection="articleIds" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

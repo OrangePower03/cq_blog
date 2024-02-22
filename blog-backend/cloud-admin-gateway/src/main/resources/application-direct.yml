@@ -1,0 +1,65 @@
+host: http://127.0.0.1
+
+server:
+  port: 8989
+
+spring:
+  application:
+    name: admin-gateway
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      globalcors:
+        cors-configurations:
+          '[/**]': # 表示对所有的请求
+            allowedOriginPatterns: '*'
+            allowedMethods: ['GET', 'POST', 'PUT', 'DELETE']
+            allowedHeaders: '*'
+            allowCredentials: true
+            maxAge: 3600
+      routes:
+        - id: article_route
+          uri: ${host}:8888
+          predicates:
+            - Path=/content/article/**
+        - id: category_route
+          uri: ${host}:8888
+          predicates:
+            - Path=/content/category/**
+        - id: tag_route
+          uri: ${host}:8888
+          predicates:
+            - Path=/content/tag/**
+
+        - id: user_route
+          uri: ${host}:8889
+          predicates:
+            - Path=/user/**
+        - id: system_route
+          uri: ${host}:8889
+          predicates:
+            - Path=/system/**
+        - id: routers_route
+          uri: ${host}:8889
+          predicates:
+            - Path=/getRouters
+        - id: info_route
+          uri: ${host}:8889
+          predicates:
+            - Path=/getInfo
+        - id: upload_route
+          uri: ${host}:8889
+          predicates:
+            - Path=/upload
+
+        - id: link_route
+          uri: ${host}:8890
+          predicates:
+            - Path=/content/link/**
+
+      # 将重复的请求头删除，网关和后端的跨域导致两个了，删掉一个
+      default-filters:
+          - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin

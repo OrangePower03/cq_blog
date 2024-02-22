@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/admin/pom.xml" />
+        <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/blog-common/pom.xml" />
+        <option value="$PROJECT_DIR$/blog-article/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-blog-article/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-blog-common/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-blog-user/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-blog-comment/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-blog-link/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-admin-common/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-blog-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-admin-article/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-admin-comment/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-admin-user/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-admin-link/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-admin-gateway/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/admin/pom.xml" />
+        <option value="$PROJECT_DIR$/blog-article/pom.xml" />
+        <option value="$PROJECT_DIR$/blog-comment/pom.xml" />
+        <option value="$PROJECT_DIR$/blog-user/pom.xml" />
+        <option value="$PROJECT_DIR$/blog/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-admin-comment/pom.xml" />
+        <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/framework/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

@@ -1,0 +1,65 @@
+server:
+  port: 8890
+
+
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 日志
+#
+#  global-config:
+#    db-config:
+#      logic-delete-field: delFlag # 逻辑删除
+#      logic-delete-value: 1       # 删除的是1
+#      logic-not-delete-value: 0   # 未删除是0
+#      id-type: auto               # 主键自增
+#  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+#  mapperLocations: classpath*:mapperXml/*.xml
+
+
+spring:
+  application:
+    name: admin-link
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/blog_link?serverTimezone=Asia/Shanghai&useSSL=false
+    hikari:
+      username: root
+      password: 123123
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+  servlet:
+    multipart:
+      max-file-size: 2MB          # 文件上传最大内存
+      max-request-size: 5MB
+
+  cloud:
+    nacos:
+      server-addr: 192.168.10.10:8848
+      username: nacos
+      password: nacos
+      config:
+        group: PROPERTIES_GROUP
+        shared-configs[0]:
+          data-id: application.yml
+          refresh: true
+  config:
+    import:
+      - optional:nacos:application.yml
+
+
+#dubbo:
+#  protocol:
+#    port: -1
+#    name: dubbo
+#  registry:
+#    address: nacos://${spring.cloud.nacos.server-addr}
+#    username: ${spring.cloud.nacos.discovery.username}
+#    password: ${spring.cloud.nacos.discovery.password}
+#    parameters:
+#      namespace: dubbo
+#      group: dubbo
+#  application:
+#    qos-enable: false
+#  consumer:
+#    check: false
+
