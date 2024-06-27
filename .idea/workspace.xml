@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c638abde-5230-482a-9234-3b1c9dae1c93" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-backend/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-backend/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-backend/cloud-blog-article/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-backend/cloud-blog-article/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-backend/cloud-blog-comment/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-backend/cloud-blog-comment/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-backend/cloud-blog-gateway/src/main/resources/application-loadBalance.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-backend/cloud-blog-gateway/src/main/resources/application-loadBalance.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-backend/cloud-blog-link/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-backend/cloud-blog-link/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-backend/cloud-blog-user/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-backend/cloud-blog-user/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-backend/experience.md" beforeDir="false" afterPath="$PROJECT_DIR$/blog-backend/experience.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/blog-frontend/sg-blog-vue/node_modules/less">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2eXkgyLJGgLoDhVapcytrZUNBwl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c638abde-5230-482a-9234-3b1c9dae1c93" name="Changes" comment="" />
+      <created>1712058425410</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712058425410</updated>
+      <workItem from="1712058426438" duration="15000" />
+    </task>
+    <servers />
+  </component>
+</project>
