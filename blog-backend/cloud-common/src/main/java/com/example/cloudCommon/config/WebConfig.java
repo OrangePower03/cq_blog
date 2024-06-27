@@ -1,4 +1,4 @@
-package com.example.cloudCommon.config;
+    package com.example.cloudCommon.config;
 
 import com.alibaba.fastjson.serializer.SerializeConfig;
 import com.alibaba.fastjson.serializer.SerializerFeature;

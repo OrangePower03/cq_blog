@@ -84,7 +84,7 @@
    Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module 
    ```
 
-8. SCG无法集成到nacos注册中心中，集成后会报以下的错。偶尔会导致500，无法找到服务错误，若是直连不会有任何错误。在服务中使用的dubbo后报以下错，这个错可能是指走http不成功导致的，而dubbo3.x以后默认已经不支持http协议了，所以可能就删除了对应http的依赖包，当更改为2.7.15后并未报错，所以应该需要加入一些http的包，这里不道出解决方案供未来填空
+8. SCG无法集成到nacos注册中心中，集成后会报以下的错。偶尔会导致500，无法找到服务错误，若是直连不会有任何错误。在服务中使用的dubbo后报以下错，这个错可能是指走http不成功导致的，而dubbo3.x以后默认已经不支持http协议了，所以可能就删除了对应http的依赖包，当更改为2.7.15后并未报错
 
    ```java
    java.lang.IllegalArgumentException: invalid version format: UNSUPPORTED
